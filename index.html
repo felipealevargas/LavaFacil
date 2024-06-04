@@ -35,10 +35,24 @@
             margin-top: 80px; /* adjust for fixed header */
         }
         .hero {
-            background: url('https://via.placeholder.com/1500x500') no-repeat center center/cover;
+            position: relative;
+            height: 500px;
             color: white;
             text-align: center;
-            padding: 150px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .hero video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: translate(-50%, -50%);
+            z-index: -1;
         }
         .hero h2 {
             font-size: 2.5em;
@@ -121,8 +135,14 @@
         <h1>LavaFácil</h1>
     </header>
     <div class="hero">
-        <h2>Serviço de Lavação Self-Service</h2>
-        <p>Descubra a praticidade e a eficiência de nosso totem de lavação self-service, disponibilizado como comodato para facilitar sua vida.</p>
+        <video autoplay muted loop>
+            <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+        <div class="hero-content">
+            <h2>Serviço de Lavação Self-Service</h2>
+            <p>Descubra a praticidade e a eficiência de nosso totem de lavação self-service, disponibilizado como comodato para facilitar sua vida.</p>
+        </div>
     </div>
     <div class="container">
         <div class="features">
