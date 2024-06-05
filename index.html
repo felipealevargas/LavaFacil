@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LavaFácil - Self-Service</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             background-color: #f4f3f8;
             margin: 0;
             padding: 0;
@@ -44,7 +46,7 @@
             justify-content: center;
             background-image: url('https://img.freepik.com/fotos-premium/um-homem-lava-seu-carro-em-uma-lavagem-de-carros-self-service-usando-uma-mangueira-com-agua-pressurizada_158155-2508.jpg?w=740'); /* Substitua com o URL da sua imagem */
             background-size: cover;
-            background-position: center;
+            background-position: center bottom; /* Ajusta a imagem para baixo */
         }
         .hero-content {
             position: relative;
@@ -52,14 +54,29 @@
             background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro semi-transparente */
             padding: 20px;
             border-radius: 10px;
+            animation: fadeIn 2s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
         .hero h2 {
             font-size: 2.5em;
             margin: 0;
+            animation: slideInLeft 1s;
         }
         .hero p {
             font-size: 1.2em;
             margin: 10px 0 20px;
+            animation: slideInRight 1s;
+        }
+        @keyframes slideInLeft {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+        @keyframes slideInRight {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
         }
         .features {
             display: flex;
