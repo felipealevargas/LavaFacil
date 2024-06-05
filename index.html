@@ -42,20 +42,24 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-image: url('https://www.your-image-url.com'); /* Substitua com o URL da sua imagem */
+            background-image: url('https://www.shutterstock.com/shutterstock/videos/1108389085/thumb/1.jpg'); /* Substitua com o URL da sua imagem */
             background-size: cover;
             background-position: center;
         }
         .hero-content {
+            position: relative;
+            z-index: 1;
             background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro semi-transparente */
             padding: 20px;
             border-radius: 10px;
         }
         .hero h2 {
             font-size: 2.5em;
+            margin: 0;
         }
         .hero p {
             font-size: 1.2em;
+            margin: 10px 0 20px;
         }
         .features {
             display: flex;
